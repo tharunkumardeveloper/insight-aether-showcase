@@ -41,7 +41,7 @@ export const Route = createRootRoute({
           "Portfolio of Dharani Karthikeyan — CS student exploring AI, data analytics, and full-stack development. Projects, experience, and achievements.",
       },
       { name: "author", content: "Dharani Karthikeyan" },
-      { property: "og:title", content: "Dharani K — Portfolio" },
+      { property: "og:title", content: "Dharani K — Computer Science · AI · Data Analytics" },
       {
         property: "og:description",
         content:
@@ -49,6 +49,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dharani K — Computer Science · AI · Data Analytics" },
+      { name: "description", content: "Dharani's Digital Canvas is a professional portfolio website showcasing technical skills and projects." },
+      { property: "og:description", content: "Dharani's Digital Canvas is a professional portfolio website showcasing technical skills and projects." },
+      { name: "twitter:description", content: "Dharani's Digital Canvas is a professional portfolio website showcasing technical skills and projects." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48c6052d-e928-4f2e-8244-b4530ab0cc4b/id-preview-37daef64--c920e9b1-5301-44c0-b012-c5b2448d5c5d.lovable.app-1777181930772.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48c6052d-e928-4f2e-8244-b4530ab0cc4b/id-preview-37daef64--c920e9b1-5301-44c0-b012-c5b2448d5c5d.lovable.app-1777181930772.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
