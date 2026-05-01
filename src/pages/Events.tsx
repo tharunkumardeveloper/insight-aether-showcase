@@ -49,7 +49,7 @@ export default function EventsPage() {
         badge: "1st Prize 🥇",
         prize: true,
         desc: "Won 1st place in the inter-college cultural dance competition — recognized for performance, coordination, and stage presence.",
-        images: ["/src/assets/events/Sparkle 2024.jpeg", "/src/assets/events/Sparkle 2024 2.jpeg"]
+        images: ["/events/Sparkle 2024.jpeg", "/events/Sparkle 2024 2.jpeg"]
       },
       {
         name: "Convergence'24",
@@ -59,7 +59,7 @@ export default function EventsPage() {
         badge: "Prize 🏆",
         prize: true,
         desc: "Paper presentation on Business Communication — awarded for clarity, structure, and delivery.",
-        images: ["/src/assets/events/Convergence'24 1.jpeg", "/src/assets/events/Convergence'24 2.jpeg"]
+        images: ["/events/Convergence'24 1.jpeg", "/events/Convergence'24 2.jpeg"]
       }
     ],
     2025: [
@@ -71,7 +71,7 @@ export default function EventsPage() {
         badge: "2nd Prize 🥈",
         prize: true,
         desc: "Presented on industrial standards using Helmet Production as a real-world use case. Evaluated on technical accuracy and practical application.",
-        images: ["/src/assets/events/Standard Spectrum 4.0 2025 1.jpeg", "/src/assets/events/Standard Spectrum 4.0 2025 2.jpeg"]
+        images: ["/events/Standard Spectrum 4.0 2025 1.jpeg", "/events/Standard Spectrum 4.0 2025 2.jpeg"]
       },
       {
         name: "TechBlaze 2k25",
@@ -81,7 +81,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "Participated in two events — Auction simulation and Thesis Presentation. Presented Urban Breeze, an IoT air quality monitoring system.",
-        images: ["/src/assets/events/TechBlaze 2k25 1.jpeg", "/src/assets/events/TechBlaze 2k25 2.jpeg"]
+        images: ["/events/TechBlaze 2k25 1.jpeg", "/events/TechBlaze 2k25 2.jpeg"]
       },
       {
         name: "Refuerzo'25",
@@ -91,7 +91,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "Presented Urban Breeze — an IoT-based air quality monitoring system with real-time AQI dashboard and environmental alert system.",
-        images: ["/src/assets/events/Refuerzo'25 1.jpeg", "/src/assets/events/Refuerzo'25 2.jpeg"]
+        images: ["/events/Refuerzo'25 1.jpeg", "/events/Refuerzo'25 2.jpeg"]
       },
       {
         name: "Qtuxathon 2.0",
@@ -101,7 +101,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "24-hour hackathon. Built a Blockchain-based application from scratch within the event duration.",
-        images: ["/src/assets/events/Qtuxathon 2.0 1.jpeg", "/src/assets/events/Qtuxathon 2.0 2.jpeg"]
+        images: ["/events/Qtuxathon 2.0 1.jpeg", "/events/Qtuxathon 2.0 2.jpeg"]
       },
       {
         name: "TechCaucus-2025",
@@ -111,7 +111,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "Paper presentation on TruthLense AI — an AI-powered media integrity platform detecting deepfakes, audio-visual inconsistencies, and steganography-based hidden content.",
-        images: ["/src/assets/events/TechCaucus-2025.jpeg"]
+        images: ["/events/TechCaucus-2025.jpeg"]
       },
       {
         name: "Standard Spectrum 5.0",
@@ -121,7 +121,7 @@ export default function EventsPage() {
         badge: "1st Prize 🥇",
         prize: true,
         desc: "Participated in two events — Paper Presentation and Technical Committee Meeting. Bagged 1st place in the Technical Committee Meeting.",
-        images: ["/src/assets/events/Standard Spectrum 5.0 1.jpeg", "/src/assets/events/Standard Spectrum 5.0 2.jpeg"]
+        images: ["/events/Standard Spectrum 5.0 1.jpeg", "/events/Standard Spectrum 5.0 2.jpeg"]
       },
       {
         name: "Genaisis'25",
@@ -131,7 +131,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "Competed in 3 events — Mystic Morphs (decoding), Triwizard Challenge, and Gringotts Innovation Vault (on-spot business pitch).",
-        images: ["/src/assets/events/Genaisis'25.jpeg"]
+        images: ["/events/Genaisis'25.jpeg"]
       },
       {
         name: "Steganos'25",
@@ -141,7 +141,7 @@ export default function EventsPage() {
         badge: "2nd Prize 🥈",
         prize: true,
         desc: "Presented Talent Track — an AI-powered fitness analysis platform. Evaluated on innovation, technical depth, and real-world impact.",
-        images: ["/src/assets/events/Steganos'25 1.jpeg", "/src/assets/events/Steganos'25 2.jpeg"]
+        images: ["/events/Steganos'25 1.jpeg", "/events/Steganos'25 2.jpeg"]
       },
       {
         name: "Industry Institution Summit 7.0",
@@ -151,7 +151,7 @@ export default function EventsPage() {
         badge: "1st Prize 🥇",
         prize: true,
         desc: "Participated in two events — Quiz and Mobile App Development. Bagged 1st place in Mobile App Development with Talent Track.",
-        images: ["/src/assets/events/Industry Institution Summit 7.0 4.jpg", "/src/assets/events/Industry Institution Summit 7.0 1.jpeg", "/src/assets/events/Industry Institution Summit 7.0 2.jpeg", "/src/assets/events/Industry Institution Summit 7.0 3.jpeg"]
+        images: ["/events/Industry Institution Summit 7.0 4.jpg", "/events/Industry Institution Summit 7.0 1.jpeg", "/events/Industry Institution Summit 7.0 2.jpeg", "/events/Industry Institution Summit 7.0 3.jpeg"]
       }
     ],
     2026: [
@@ -163,7 +163,7 @@ export default function EventsPage() {
         badge: "2nd Prize 🥈",
         prize: true,
         desc: "Paper presentation at the BIS Student Chapter event. Evaluated on technical content and presentation quality.",
-        images: ["/src/assets/events/BIS 2026.jpeg", "/src/assets/events/BIS 2026-2.jpeg"]
+        images: ["/events/BIS 2026.jpeg", "/events/BIS 2026-2.jpeg"]
       },
       {
         name: "NXTGEN",
@@ -173,7 +173,7 @@ export default function EventsPage() {
         badge: "Participation",
         prize: false,
         desc: "24-hour national level hackathon. Collaborated on building a working prototype within the event timeframe.",
-        images: ["/src/assets/events/Nextgen 2026 1.jpeg", "/src/assets/events/Nextgen 2026 2.jpeg", "/src/assets/events/Nextgen 2026 3.jpeg"]
+        images: ["/events/Nextgen 2026 1.jpeg", "/events/Nextgen 2026 2.jpeg", "/events/Nextgen 2026 3.jpeg"]
       }
     ]
   }
