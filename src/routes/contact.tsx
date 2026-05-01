@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, LinkedinIcon, GithubIcon } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -29,14 +29,14 @@ const contactCards = [
     href: "tel:+919042607881",
   },
   {
-    icon: Linkedin,
+    icon: LinkedinIcon,
     label: "LinkedIn",
     value: "linkedin.com/in/dharani-karthikeyan",
     href: "https://linkedin.com/in/dharani-karthikeyan",
     target: "_blank",
   },
   {
-    icon: Github,
+    icon: GithubIcon,
     label: "GitHub",
     value: "github.com/dharanikarthi",
     href: "https://github.com/dharanikarthi",

@@ -7,8 +7,8 @@ import {
   Lightbulb,
   GraduationCap,
   School,
-  Github,
-  Linkedin,
+  GithubIcon,
+  LinkedinIcon,
   Mail,
   CheckCircle2,
   Trophy,
@@ -140,7 +140,7 @@ function AboutPage() {
                   rel="noreferrer"
                   className="flex items-center justify-center rounded-xl border border-[#2d1f42] bg-[#1a1025] p-3 transition-all hover:border-[#c084fc]"
                 >
-                  <Github className="h-5 w-5 text-[#c084fc]" />
+                  <GithubIcon className="h-5 w-5 text-[#c084fc]" />
                 </a>
                 <a
                   href="https://linkedin.com/in/dharani-karthikeyan"
@@ -148,7 +148,7 @@ function AboutPage() {
                   rel="noreferrer"
                   className="flex items-center justify-center rounded-xl border border-[#2d1f42] bg-[#1a1025] p-3 transition-all hover:border-[#c084fc]"
                 >
-                  <Linkedin className="h-5 w-5 text-[#c084fc]" />
+                  <LinkedinIcon className="h-5 w-5 text-[#c084fc]" />
                 </a>
                 <a
                   href="mailto:dharanik269@gmail.com"

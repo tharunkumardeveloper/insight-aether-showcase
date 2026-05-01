@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Server, Brain, Wrench, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Code, Server, Brain, Wrench, GithubIcon, LinkedinIcon, Mail } from "lucide-react";
 import dharaniPhoto from "@/assets/dharani.jpg";
 
 export const Route = createFileRoute("/")({
@@ -336,7 +336,7 @@ function HomePage() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-[#c084fc] bg-transparent px-6 py-3 font-bold text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
             >
-              <Linkedin className="h-4 w-4" />
+              <LinkedinIcon className="h-4 w-4" />
               LinkedIn <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -345,7 +345,7 @@ function HomePage() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-[#c084fc] bg-transparent px-6 py-3 font-bold text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
             >
-              <Github className="h-4 w-4" />
+              <GithubIcon className="h-4 w-4" />
               GitHub <ArrowRight className="h-4 w-4" />
             </a>
           </div>
