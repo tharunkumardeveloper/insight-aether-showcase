@@ -135,7 +135,7 @@ export default function CertificationsPage() {
     <div className="min-h-screen bg-[#0d0a14] text-[#f5f0ff]">
       {/* PAGE HERO */}
       <section className="bg-[#0d0a14]">
-        <div className="mx-auto max-w-[1200px] px-8 py-20">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 py-16 sm:py-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,13 +143,13 @@ export default function CertificationsPage() {
             className="text-center"
           >
             <h1
-              className="font-display text-5xl font-bold"
+              className="font-display text-3xl sm:text-4xl md:text-5xl font-bold"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
             >
               <span className="text-[#a89bc2]">Licenses & </span>
               <span className="text-[#c084fc]">Certifications</span>
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl font-sans text-lg text-[#6b5f80]">
+            <p className="mx-auto mt-4 max-w-2xl font-sans text-base sm:text-lg text-[#6b5f80] px-4">
               Professional certifications and credentials earned through continuous learning
             </p>
           </motion.div>
@@ -158,8 +158,8 @@ export default function CertificationsPage() {
 
       {/* CERTIFICATIONS LIST */}
       <section className="bg-[#0d0a14]">
-        <div className="mx-auto max-w-[1200px] px-8 pb-20">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 pb-16 sm:pb-20">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
             {certifications.map((cert, i) => (
               <motion.div
                 key={cert.name}
@@ -167,12 +167,12 @@ export default function CertificationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.6 }}
-                className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#2d1f42] bg-[#1a1025] px-8 py-6 transition-all duration-300 hover:border-[#c084fc] md:flex-row md:items-center"
+                className="flex flex-col items-start justify-between gap-4 sm:gap-6 rounded-2xl border border-[#2d1f42] bg-[#1a1025] px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 transition-all duration-300 hover:border-[#c084fc] md:flex-row md:items-center"
               >
                 {/* Left Side */}
-                <div className="flex flex-1 items-center gap-5">
+                <div className="flex flex-1 items-start sm:items-center gap-3 sm:gap-5 w-full">
                   {/* Logo Box */}
-                  <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-xl border border-[#2d1f42] bg-[#150d20] p-3">
+                  <div className="flex h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 items-center justify-center rounded-xl border border-[#2d1f42] bg-[#150d20] p-2 sm:p-3">
                     <img
                       src={cert.logo}
                       alt={`${cert.issuer} logo`}
@@ -181,23 +181,23 @@ export default function CertificationsPage() {
                   </div>
 
                   {/* Text Block */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3
-                      className="font-display text-base font-semibold text-[#f5f0ff]"
+                      className="font-display text-sm sm:text-base font-semibold text-[#f5f0ff] line-clamp-2"
                       style={{ fontFamily: "Space Grotesk, sans-serif" }}
                     >
                       {cert.name}
                     </h3>
-                    <p className="mt-0.5 font-sans text-sm text-[#c084fc]">{cert.issuer}</p>
+                    <p className="mt-0.5 font-sans text-xs sm:text-sm text-[#c084fc]">{cert.issuer}</p>
                     <div className="mt-1 flex items-center gap-1.5">
                       <Calendar className="h-3 w-3 text-[#6b5f80]" />
                       <span className="font-sans text-xs text-[#6b5f80]">{cert.date}</span>
                     </div>
-                    <div className="mt-2.5 flex flex-wrap gap-2">
+                    <div className="mt-2 sm:mt-2.5 flex flex-wrap gap-1.5 sm:gap-2">
                       {cert.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-[#2d1f42] bg-[#150d20] px-3 py-1 text-xs text-[#a89bc2]"
+                          className="rounded-full border border-[#2d1f42] bg-[#150d20] px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs text-[#a89bc2]"
                         >
                           {tag}
                         </span>
@@ -210,20 +210,20 @@ export default function CertificationsPage() {
                 {cert.isMultiple ? (
                   <button
                     onClick={() => setShowInfosysModal(true)}
-                    className="flex items-center gap-2 rounded-lg border border-[#2d1f42] bg-transparent px-4 py-2 text-sm text-[#a89bc2] transition-all hover:border-[#c084fc] hover:text-[#c084fc]"
+                    className="flex items-center justify-center gap-2 rounded-lg border border-[#2d1f42] bg-transparent px-4 py-2 text-xs sm:text-sm text-[#a89bc2] transition-all hover:border-[#c084fc] hover:text-[#c084fc] w-full sm:w-auto whitespace-nowrap"
                   >
                     Show Credentials
-                    <ExternalLink className="h-3.5 w-3.5" />
+                    <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   </button>
                 ) : (
                   <a
                     href={cert.certificateUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2 rounded-lg border border-[#2d1f42] bg-transparent px-4 py-2 text-sm text-[#a89bc2] transition-all hover:border-[#c084fc] hover:text-[#c084fc]"
+                    className="flex items-center justify-center gap-2 rounded-lg border border-[#2d1f42] bg-transparent px-4 py-2 text-xs sm:text-sm text-[#a89bc2] transition-all hover:border-[#c084fc] hover:text-[#c084fc] w-full sm:w-auto whitespace-nowrap"
                   >
                     Show Credential
-                    <ExternalLink className="h-3.5 w-3.5" />
+                    <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   </a>
                 )}
               </motion.div>
@@ -247,44 +247,44 @@ export default function CertificationsPage() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-[#2d1f42] bg-[#0d0a14] p-8"
+              className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-[#2d1f42] bg-[#0d0a14] p-5 sm:p-6 md:p-8"
             >
               <button
                 onClick={() => setShowInfosysModal(false)}
-                className="absolute right-4 top-4 rounded-lg border border-[#2d1f42] bg-[#1a1025] p-2 text-[#c084fc] transition-all hover:border-[#c084fc]"
+                className="absolute right-3 top-3 sm:right-4 sm:top-4 rounded-lg border border-[#2d1f42] bg-[#1a1025] p-2 text-[#c084fc] transition-all hover:border-[#c084fc]"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
 
               <h2
-                className="font-display text-3xl font-bold text-[#f5f0ff]"
+                className="font-display text-2xl sm:text-3xl font-bold text-[#f5f0ff] pr-10"
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
               >
                 Infosys Spring Board AI Certificates (16)
               </h2>
-              <p className="mt-2 text-sm text-[#6b5f80]">
+              <p className="mt-2 text-xs sm:text-sm text-[#6b5f80]">
                 Click on any certificate to view it in a new tab
               </p>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 sm:mt-8 grid gap-2 sm:gap-3 sm:grid-cols-2">
                 {infosysCertificates.map((certUrl, index) => (
                   <a
                     key={certUrl}
                     href={certUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-[#2d1f42] bg-[#1a1025] p-4 transition-all hover:border-[#c084fc]"
+                    className="flex items-center gap-3 rounded-xl border border-[#2d1f42] bg-[#1a1025] p-3 sm:p-4 transition-all hover:border-[#c084fc]"
                   >
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#c084fc]/10 text-[#c084fc]">
-                      <span className="font-bold">{index + 1}</span>
+                    <div className="flex h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg bg-[#c084fc]/10 text-[#c084fc]">
+                      <span className="font-bold text-sm sm:text-base">{index + 1}</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-medium text-[#f5f0ff]">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs sm:text-sm font-medium text-[#f5f0ff] truncate">
                         AI Certificate {index + 1}
                       </div>
-                      <div className="text-xs text-[#6b5f80]">Infosys Spring Board</div>
+                      <div className="text-[10px] sm:text-xs text-[#6b5f80]">Infosys Spring Board</div>
                     </div>
-                    <ExternalLink className="h-4 w-4 text-[#c084fc]" />
+                    <ExternalLink className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#c084fc] flex-shrink-0" />
                   </a>
                 ))}
               </div>

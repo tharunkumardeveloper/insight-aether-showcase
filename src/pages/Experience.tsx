@@ -85,7 +85,7 @@ export default function ExperiencePage() {
     <>
       <PageShell>
         <section className="relative">
-          <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <SectionHeading
               eyebrow="Experience"
               title={
@@ -96,30 +96,87 @@ export default function ExperiencePage() {
               description="Real teams, real products, real outcomes — every role taught me to ship and listen carefully."
             />
 
-            <div ref={ref} className="relative mt-20">
+            <div ref={ref} className="relative mt-12 sm:mt-16 md:mt-20">
               {/* Center timeline rail */}
-              <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-[#2d1f42]" />
+              <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-[#2d1f42] hidden md:block" />
               <motion.div
                 style={{ height: lineHeight }}
-                className="absolute left-1/2 top-0 w-0.5 -translate-x-1/2 bg-[#c084fc]"
+                className="absolute left-1/2 top-0 w-0.5 -translate-x-1/2 bg-[#c084fc] hidden md:block"
               />
 
-              <div className="space-y-24">
+              <div className="space-y-16 sm:space-y-20 md:space-y-24">
                 {TIMELINE.map((item, i) => {
                   const isRight = i % 2 === 0;
                   return (
                     <Reveal key={item.role} delay={i * 0.05}>
                       <div className="relative">
-                        {/* Date badge - centered on line */}
-                        <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-12">
-                          <div className="inline-flex items-center gap-2 rounded-full border border-[#c084fc]/30 bg-[#c084fc]/10 px-4 py-1.5 text-xs font-medium text-[#c084fc]">
+                        {/* Date badge - centered on line for desktop, top for mobile */}
+                        <div className="md:absolute md:left-1/2 md:top-0 z-20 md:-translate-x-1/2 md:-translate-y-12 mb-4 md:mb-0 flex justify-center">
+                          <div className="inline-flex items-center gap-2 rounded-full border border-[#c084fc]/30 bg-[#c084fc]/10 px-3 sm:px-4 py-1.5 text-xs font-medium text-[#c084fc]">
                             <Calendar className="h-3 w-3" />
                             {item.when}
                           </div>
                         </div>
 
-                        {/* 3-column grid: [images/card] [center line] [card/images] */}
-                        <div className="grid grid-cols-[1fr_60px_1fr] items-center gap-0">
+                        {/* Mobile layout - single column */}
+                        <div className="md:hidden">
+                          <div className="rounded-3xl border border-[#2d1f42] bg-[#1a1025]/60 p-5 sm:p-6 shadow-card backdrop-blur transition-smooth hover:border-[#c084fc]/40">
+                            <div className="flex items-start gap-3">
+                              <div className="mt-0.5 flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-primary shadow-glow">
+                                <Briefcase className="h-4 w-4 text-primary-foreground" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h3 className="font-display text-lg sm:text-xl font-semibold text-[#f5f0ff]">
+                                  {item.role}
+                                </h3>
+                                <div className="mt-1 text-sm text-[#c084fc]">
+                                  {item.org}
+                                </div>
+                                <div className="mt-1 inline-flex items-center gap-1.5 text-xs text-[#6b5f80]">
+                                  <MapPin className="h-3 w-3" />
+                                  {item.place}
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul className="mt-4 sm:mt-5 space-y-2.5">
+                              {item.bullets.map((b) => (
+                                <li
+                                  key={b}
+                                  className="flex gap-2 sm:gap-3 text-sm leading-relaxed text-[#a89bc2]"
+                                >
+                                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#c084fc]" />
+                                  <span className="flex-1">{b}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Images below card on mobile */}
+                          {item.images && item.images.length > 0 && (
+                            <motion.div
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.6, delay: 0.2 }}
+                              className="mt-4 flex flex-col gap-3"
+                            >
+                              {item.images.map((img, idx) => (
+                                <motion.img
+                                  key={idx}
+                                  src={img}
+                                  alt={`${item.role} ${idx + 1}`}
+                                  onClick={() => openLightbox(item.images!, idx, item.role)}
+                                  className="h-[180px] sm:h-[200px] w-full cursor-pointer rounded-[14px] border border-[#2d1f42] object-cover transition-all duration-300 hover:border-[#c084fc]"
+                                  whileHover={{ scale: 1.02 }}
+                                />
+                              ))}
+                            </motion.div>
+                          )}
+                        </div>
+
+                        {/* Desktop layout - 3-column grid */}
+                        <div className="hidden md:grid grid-cols-[1fr_60px_1fr] items-center gap-0">
                           {/* LEFT COLUMN */}
                           <div className={`flex ${isRight ? 'justify-end pr-8' : 'justify-start pl-8'}`}>
                             {isRight ? (

@@ -124,7 +124,7 @@ export default function ProjectsPage() {
                 <TiltCard>
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="group relative h-full overflow-hidden rounded-3xl border border-border bg-surface/60 p-8 backdrop-blur transition-smooth hover:border-primary/40 hover:shadow-glow"
+                    className="group relative h-full overflow-hidden rounded-3xl border border-border bg-surface/60 p-5 sm:p-6 md:p-8 backdrop-blur transition-smooth hover:border-primary/40 hover:shadow-glow"
                   >
                     {/* glow */}
                     <div
@@ -132,7 +132,7 @@ export default function ProjectsPage() {
                     />
 
                     {/* gradient header with image */}
-                    <div className="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10">
+                    <div className="relative mb-4 sm:mb-6 h-40 sm:h-48 overflow-hidden rounded-2xl border border-white/10">
                       <img 
                         src={p.image} 
                         alt={p.title}
@@ -142,38 +142,38 @@ export default function ProjectsPage() {
                         className={`absolute inset-0 bg-gradient-to-br ${p.accent} mix-blend-multiply`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent" />
-                      <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background/70 backdrop-blur">
-                        <p.icon className="h-5 w-5 text-primary-glow" />
+                      <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-background/70 backdrop-blur">
+                        <p.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary-glow" />
                       </div>
                     </div>
 
                     <div className="text-xs font-medium uppercase tracking-wider text-primary-glow">
                       {p.subtitle}
                     </div>
-                    <h3 className="mt-2 font-display text-2xl font-semibold">
+                    <h3 className="mt-2 font-display text-xl sm:text-2xl font-semibold">
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-2 sm:mt-3 text-sm leading-relaxed text-muted-foreground">
                       {p.summary}
                     </p>
 
-                    <ul className="mt-5 space-y-2">
+                    <ul className="mt-4 sm:mt-5 space-y-2">
                       {p.details.map((d) => (
                         <li
                           key={d}
-                          className="flex gap-3 text-sm text-muted-foreground"
+                          className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground"
                         >
                           <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary-glow" />
-                          {d}
+                          <span className="flex-1">{d}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="mt-6 flex flex-wrap gap-2">
+                    <div className="mt-4 sm:mt-6 flex flex-wrap gap-2">
                       {p.tags.map((t) => (
                         <span
                           key={t}
-                          className="rounded-full border border-border bg-white/5 px-2.5 py-1 text-[11px] text-foreground/80"
+                          className="rounded-full border border-border bg-white/5 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-[11px] text-foreground/80"
                         >
                           {t}
                         </span>
@@ -181,12 +181,12 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Links section */}
-                    <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                    <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 border-t border-border pt-3 sm:pt-4">
                       <a
                         href={p.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-[#c084fc] bg-transparent px-4 py-2 text-sm font-medium text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
+                        className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-[#c084fc] bg-transparent px-4 py-2 text-sm font-medium text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
                       >
                         GitHub
                         <ExternalLink className="h-3.5 w-3.5" />
@@ -195,7 +195,7 @@ export default function ProjectsPage() {
                         href={p.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-[#c084fc] px-4 py-2 text-sm font-medium text-[#0d0a14] transition-all hover:bg-[#e879f9]"
+                        className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#c084fc] px-4 py-2 text-sm font-medium text-[#0d0a14] transition-all hover:bg-[#e879f9]"
                       >
                         Live Demo
                         <ExternalLink className="h-3.5 w-3.5" />

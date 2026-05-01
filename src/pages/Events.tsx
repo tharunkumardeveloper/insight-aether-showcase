@@ -181,7 +181,7 @@ export default function EventsPage() {
   return (
     <>
       <div style={{ backgroundColor: '#0d0a14', minHeight: '100vh', fontFamily: 'Inter, sans-serif' }}>
-        <div style={{ textAlign: 'center', padding: '80px 24px 40px' }}>
+        <div style={{ textAlign: 'center', padding: '80px 16px 40px' }}>
           <span style={{
             display: 'inline-block',
             background: 'rgba(192,132,252,0.1)',
@@ -189,7 +189,7 @@ export default function EventsPage() {
             color: '#c084fc',
             padding: '4px 16px',
             borderRadius: '999px',
-            fontSize: '12px',
+            fontSize: '11px',
             letterSpacing: '2px',
             textTransform: 'uppercase',
             marginBottom: '24px'
@@ -198,36 +198,38 @@ export default function EventsPage() {
           </span>
           <h1 style={{
             fontFamily: 'Space Grotesk, sans-serif',
-            fontSize: 'clamp(2.5rem, 6vw, 3.5rem)',
+            fontSize: 'clamp(2rem, 8vw, 3.5rem)',
             fontWeight: 900,
             color: '#f5f0ff',
-            margin: '0 0 16px'
+            margin: '0 0 16px',
+            padding: '0 16px'
           }}>
             Where I've{' '}
             <em style={{ color: '#c084fc', fontStyle: 'italic' }}>Competed.</em>
           </h1>
-          <p style={{ color: '#a89bc2', fontSize: '1.1rem', maxWidth: '560px', margin: '0 auto' }}>
+          <p style={{ color: '#a89bc2', fontSize: 'clamp(0.95rem, 3vw, 1.1rem)', maxWidth: '560px', margin: '0 auto', padding: '0 16px' }}>
             National-level events, hackathons, and competitions across technical and business domains.
           </p>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '16px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+            gap: '12px',
             maxWidth: '500px',
-            margin: '40px auto 0'
+            margin: '32px auto 0',
+            padding: '0 16px'
           }}>
             {[['12', 'Events'], ['5', 'Prizes Won'], ['2', 'Hackathons']].map(([num, label]) => (
               <div key={label} style={{
                 background: '#1a1025',
                 border: '1px solid #2d1f42',
                 borderRadius: '12px',
-                padding: '20px 12px',
+                padding: '16px 12px',
                 textAlign: 'center'
               }}>
-                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '2rem', fontWeight: 700, color: '#c084fc' }}>
+                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: 'clamp(1.5rem, 5vw, 2rem)', fontWeight: 700, color: '#c084fc' }}>
                   {num}
                 </div>
-                <div style={{ fontSize: '12px', color: '#6b5f80', marginTop: '4px' }}>
+                <div style={{ fontSize: '11px', color: '#6b5f80', marginTop: '4px' }}>
                   {label}
                 </div>
               </div>
@@ -237,7 +239,7 @@ export default function EventsPage() {
 
         <div style={{ borderTop: '1px solid #2d1f42', maxWidth: '800px', margin: '0 auto' }} />
 
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px 80px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '32px 16px 80px' }}>
           {(Object.entries(events) as [string, typeof events[2024]][]).reverse().map(([year, yearEvents]) => (
             <div key={year}>
               <div style={{
@@ -263,33 +265,34 @@ export default function EventsPage() {
                     background: '#1a1025',
                     border: '1px solid #2d1f42',
                     borderRadius: '20px',
-                    padding: '32px',
-                    marginBottom: '24px',
+                    padding: '24px',
+                    marginBottom: '20px',
                     transition: 'border-color 300ms'
                   }}
                   whileHover={{ borderColor: '#c084fc' }}
                 >
                   {/* TOP ROW */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1 }}>
-                      <span style={{ fontSize: '20px' }}>🏆</span>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', flex: 1 }}>
+                      <span style={{ fontSize: '18px', flexShrink: 0 }}>🏆</span>
                       <span style={{
                         fontFamily: 'Space Grotesk, sans-serif',
                         fontWeight: 700,
-                        fontSize: '1.2rem',
-                        color: '#f5f0ff'
+                        fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+                        color: '#f5f0ff',
+                        flex: 1
                       }}>
                         {event.name}
                       </span>
                     </div>
                     <span style={{
-                      flexShrink: 0,
+                      alignSelf: 'flex-start',
                       background: event.prize ? 'rgba(192,132,252,0.15)' : 'rgba(168,155,194,0.08)',
                       border: `1px solid ${event.prize ? '#c084fc' : '#2d1f42'}`,
                       color: event.prize ? '#c084fc' : '#6b5f80',
                       padding: '6px 16px',
                       borderRadius: '999px',
-                      fontSize: '12px',
+                      fontSize: '11px',
                       fontWeight: 600
                     }}>
                       {event.badge}
@@ -299,8 +302,8 @@ export default function EventsPage() {
                   {/* DETAIL GRID */}
                   <div style={{ 
                     display: 'grid', 
-                    gridTemplateColumns: 'repeat(2, 1fr)', 
-                    gap: '12px 24px', 
+                    gridTemplateColumns: '1fr', 
+                    gap: '10px', 
                     marginTop: '16px' 
                   }}>
                     <div>

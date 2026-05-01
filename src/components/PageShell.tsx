@@ -8,7 +8,7 @@ export function PageShell({ children }: { children: ReactNode }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="relative pt-28"
+      className="relative pt-20 sm:pt-24 md:pt-28"
     >
       {children}
     </motion.main>
@@ -30,7 +30,7 @@ export function Reveal({
     <motion.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
@@ -52,10 +52,10 @@ export function SectionHeading({
 }) {
   return (
     <Reveal>
-      <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-3xl"}>
+      <div className={align === "center" ? "mx-auto max-w-2xl text-center px-4" : "max-w-3xl px-4 sm:px-0"}>
         {eyebrow && (
           <div
-            className={`mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary-glow ${
+            className={`mb-3 sm:mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary-glow ${
               align === "center" ? "mx-auto" : ""
             }`}
           >
@@ -63,11 +63,11 @@ export function SectionHeading({
             {eyebrow}
           </div>
         )}
-        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
           {title}
         </h2>
         {description && (
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">{description}</p>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-muted-foreground">{description}</p>
         )}
       </div>
     </Reveal>
