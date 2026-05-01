@@ -1,8 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { ExternalLink, Wind, Activity, UtensilsCrossed } from "lucide-react";
+import { ExternalLink, Wind, Activity, UtensilsCrossed, Heart } from "lucide-react";
 import { PageShell, Reveal, SectionHeading } from "@/components/PageShell";
+import gutsenseImg from "@/assets/gutsense.jpeg";
+import urbanbreezeImg from "@/assets/urbanbreeze.jpeg";
+import talenttrackImg from "@/assets/talenttrack.jpeg";
+import foodhopperImg from "@/assets/foodhopper.jpeg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -11,7 +15,7 @@ export const Route = createFileRoute("/projects")({
       {
         name: "description",
         content:
-          "Urban Breeze (AI air quality), TalentTrack (CV-powered athletic assessment), FoodHopper (full-stack restaurant platform).",
+          "Urban Breeze (AI air quality), TalentTrack (CV-powered athletic assessment), FoodHopper (full-stack restaurant platform), GutSense (AI gut health companion).",
       },
       { property: "og:title", content: "Projects — Dharani K" },
       {
@@ -26,23 +30,44 @@ export const Route = createFileRoute("/projects")({
 
 const PROJECTS = [
   {
+    title: "GutSense",
+    subtitle: "AI · Full-Stack · PWA",
+    icon: Heart,
+    image: gutsenseImg,
+    summary:
+      "AI-powered gut health companion that analyzes your food and gives personalized health insights.",
+    details: [
+      "AI food checker using Groq API and LLaMA3 — analyze food photos or typed food names for condition-specific ratings",
+      "Full-stack PWA with smart onboarding, Google OAuth, BMI calculator, and health questionnaire",
+      "Weekly PDF reports, WhatsApp sharing, dark mode, and smart meal reminder notifications",
+    ],
+    tags: ["React", "Node.js", "MongoDB", "Groq API", "LLaMA3", "Tailwind CSS", "PWA", "Vercel"],
+    accent: "from-violet-500/40 to-fuchsia-500/40",
+    github: "https://github.com/dharanikarthi/tummy-harmony",
+    demo: "https://gutsense-site.vercel.app/",
+  },
+  {
     title: "Urban Breeze",
     subtitle: "AI · Machine Learning · Data Analytics",
     icon: Wind,
+    image: urbanbreezeImg,
     summary:
       "AI-powered air quality monitoring system providing real-time AQI data, predictions, and personalized health recommendations.",
     details: [
-      "Real-time AQI tracking across multiple data sources.",
-      "Predictive ML models for short-term air quality forecasts.",
-      "Personalized health guidance based on user health profile.",
+      "Real-time AQI tracking with predictive ML models for short-term air quality forecasts",
+      "IoT sensor integration with live dashboard displaying pollution trends and environmental data",
+      "Personalized health guidance and alerts based on user health profile and current air quality",
     ],
-    tags: ["Python", "Machine Learning", "Data Analytics", "APIs"],
+    tags: ["Python", "Flask", "MySQL", "Chart.js", "IoT", "Machine Learning"],
     accent: "from-emerald-500/40 to-cyan-500/40",
+    github: "https://github.com/dharanikarthi/urban-breeze-ai-60201",
+    demo: "https://urban-breeze-ai-60201-vohz.vercel.app/",
   },
   {
     title: "TalentTrack",
     subtitle: "AI · Computer Vision · Mobile Development",
     icon: Activity,
+    image: talenttrackImg,
     summary:
       "Mobile app democratizing athletic assessment using only a smartphone camera — no extra hardware required.",
     details: [
@@ -52,11 +77,14 @@ const PROJECTS = [
     ],
     tags: ["OpenCV", "Computer Vision", "Mobile", "AI"],
     accent: "from-fuchsia-500/40 to-violet-500/40",
+    github: "https://github.com/tharunkumardeveloper/rec",
+    demo: "https://rec-green.vercel.app/",
   },
   {
     title: "FoodHopper",
     subtitle: "React · Node.js · SQL",
     icon: UtensilsCrossed,
+    image: foodhopperImg,
     summary:
       "MakeMyTrip-inspired restaurant discovery and booking platform with full-stack implementation and analytics dashboards.",
     details: [
@@ -66,6 +94,8 @@ const PROJECTS = [
     ],
     tags: ["React", "Node.js", "SQL", "Dashboards"],
     accent: "from-amber-500/40 to-pink-500/40",
+    github: "https://github.com/tharunkumardeveloper/Foodhopper",
+    demo: "https://foodhopper.vercel.app",
   },
 ];
 
@@ -122,13 +152,17 @@ function ProjectsPage() {
                       className={`absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br ${p.accent} opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-50`}
                     />
 
-                    {/* gradient header */}
-                    <div className="relative mb-6 h-32 overflow-hidden rounded-2xl border border-white/10">
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${p.accent}`}
+                    {/* gradient header with image */}
+                    <div className="relative mb-6 h-48 overflow-hidden rounded-2xl border border-white/10">
+                      <img 
+                        src={p.image} 
+                        alt={p.title}
+                        className="absolute inset-0 h-full w-full object-cover"
                       />
-                      <div className="absolute inset-0 grid-pattern opacity-50" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${p.accent} mix-blend-multiply`}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent" />
                       <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background/70 backdrop-blur">
                         <p.icon className="h-5 w-5 text-primary-glow" />
                       </div>
@@ -165,6 +199,28 @@ function ProjectsPage() {
                           {t}
                         </span>
                       ))}
+                    </div>
+
+                    {/* Links section */}
+                    <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-[#c084fc] bg-transparent px-4 py-2 text-sm font-medium text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
+                      >
+                        GitHub
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-[#c084fc] px-4 py-2 text-sm font-medium text-[#0d0a14] transition-all hover:bg-[#e879f9]"
+                      >
+                        Live Demo
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
                     </div>
                   </motion.div>
                 </TiltCard>
