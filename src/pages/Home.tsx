@@ -293,7 +293,58 @@ export default function HomePage() {
       {/* Divider */}
       <div className="border-t border-[#2d1f42]" />
 
-      {/* SECTION 7 - CONTACT CTA */}
+      {/* SECTION 7 - EVENTS */}
+      <section className="bg-[#0d0a14]">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 pt-8 sm:pt-10 pb-8 sm:pb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#f5f0ff]" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+            Events & Hackathons
+          </h2>
+          <div className="mt-2 h-1 w-12 bg-[#c084fc]" />
+        </motion.div>
+
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-xl border border-[#2d1f42] bg-[#1a1025] p-4 sm:p-6 transition-all hover:border-[#c084fc]"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <h3 className="font-display text-base sm:text-lg font-bold text-[#f5f0ff]" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+                  Ashes 1.0
+                </h3>
+                <div className="mt-1 font-sans text-sm font-medium text-[#c084fc]">Wyntrix</div>
+                <div className="mt-0.5 font-sans text-xs text-[#6b5f80]">15.2.2026</div>
+              </div>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <span className="rounded-full border border-[#c084fc] bg-transparent px-3 py-1 text-sm text-[#c084fc]">
+                24hr Hackathon
+              </span>
+              <span className="rounded-full border border-[#2d1f42] bg-[#150d20] px-3 py-1 text-sm text-[#a89bc2]">
+                Participation
+              </span>
+              <span className="rounded-full border border-[#2d1f42] bg-[#150d20] px-3 py-1 text-sm text-[#a89bc2]">
+                Talent Track
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      </section>
+
+      {/* Divider */}
+      <div className="border-t border-[#2d1f42]" />
+
+      {/* SECTION 8 - CONTACT CTA */}
       <section className="bg-[#0d0a14]">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 pt-8 sm:pt-10 pb-8 sm:pb-10">
         <motion.div
