@@ -95,6 +95,14 @@ const certifications = [
     logo: "/logos/nptel.jpg",
   },
   {
+    name: "NPTEL Certification",
+    issuer: "NPTEL",
+    date: "Issued 2026",
+    tags: ["Certification", "Learning", "Course"],
+    certificateUrl: "https://drive.google.com/file/d/1uDRUqNrXtJRgFGBdaEfQhz1LXot87wAY/view?usp=sharing",
+    logo: "/logos/nptel.jpg",
+  },
+  {
     name: "Artificial Intelligence Courses (15+)",
     issuer: "Infosys Spring Board",
     date: "Issued 2024",
