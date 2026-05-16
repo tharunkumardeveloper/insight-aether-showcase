@@ -95,7 +95,7 @@ const certifications = [
     logo: "/logos/nptel.jpg",
   },
   {
-    name: "NPTEL Certification",
+    name: "Computer Networks",
     issuer: "NPTEL",
     date: "Issued 2026",
     tags: ["Certification", "Learning", "Course"],
