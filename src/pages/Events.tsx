@@ -156,6 +156,16 @@ export default function EventsPage() {
     ],
     2026: [
       {
+        name: "Ashes 1.0",
+        date: "15 February 2026",
+        institution: "Wyntrix",
+        level: "National",
+        badge: "Participation",
+        prize: false,
+        desc: "24-hour hackathon. Presented Talent Track — an AI-powered fitness analysis platform with real-time pose detection and personalized workout recommendations.",
+        images: ["/events/Ashes 1.0.jpeg"]
+      },
+      {
         name: "BIS Student Chapter",
         date: "18 February 2026",
         institution: "BIS",
@@ -218,7 +228,7 @@ export default function EventsPage() {
             margin: '32px auto 0',
             padding: '0 16px'
           }}>
-            {[['12', 'Events'], ['5', 'Prizes Won'], ['2', 'Hackathons']].map(([num, label]) => (
+            {[['13', 'Events'], ['5', 'Prizes Won'], ['3', 'Hackathons']].map(([num, label]) => (
               <div key={label} style={{
                 background: '#1a1025',
                 border: '1px solid #2d1f42',
