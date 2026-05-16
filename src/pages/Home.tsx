@@ -138,7 +138,7 @@ export default function HomePage() {
             {
               icon: Server,
               title: "Backend",
-              skills: ["Node.js", "Express.js", "Python", "Flask", "MongoDB", "MySQL"],
+              skills: ["Node.js", "Express.js", "Flask", "MongoDB", "MySQL"],
             },
             {
               icon: Brain,
