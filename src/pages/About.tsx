@@ -83,7 +83,7 @@ export default function AboutPage() {
                       className="font-display text-4xl font-bold text-[#c084fc]"
                       style={{ fontFamily: "Space Grotesk, sans-serif" }}
                     >
-                      8.62
+                      8.71
                     </div>
                     <div className="mt-1 text-sm text-[#6b5f80]">CGPA</div>
                   </div>
@@ -337,7 +337,7 @@ export default function AboutPage() {
                   className="mt-1 font-display text-2xl font-bold text-[#c084fc]"
                   style={{ fontFamily: "Space Grotesk, sans-serif" }}
                 >
-                  8.62 / 10
+                  8.71 / 10
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
