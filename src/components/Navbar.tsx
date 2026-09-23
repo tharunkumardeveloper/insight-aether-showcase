@@ -81,7 +81,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="https://drive.google.com/file/d/1dFcVzK2hB4rJJfXBgxMDtxofktFqbwjv/view?usp=sharing"
+              href="https://drive.google.com/file/d/1OaUz7vMgCnJy7krl1LNCukwOmIZgydlh/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow transition-smooth hover:scale-105"

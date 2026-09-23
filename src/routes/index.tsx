@@ -71,7 +71,7 @@ function HomePage() {
                 See My Work <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="https://drive.google.com/file/d/1dFcVzK2hB4rJJfXBgxMDtxofktFqbwjv/view?usp=sharing"
+                href="https://drive.google.com/file/d/1OaUz7vMgCnJy7krl1LNCukwOmIZgydlh/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-[#c084fc] bg-transparent px-6 py-3 font-bold text-[#c084fc] transition-all hover:bg-[#c084fc] hover:text-[#0d0a14]"
