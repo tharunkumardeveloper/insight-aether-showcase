@@ -6,13 +6,14 @@ import gutsenseImg from "@/assets/gutsense.jpeg";
 import urbanbreezeImg from "@/assets/urbanbreeze.jpeg";
 import talenttrackImg from "@/assets/talenttrack.jpeg";
 import foodhopperImg from "@/assets/foodhopper.jpeg";
+import medassistImg from "@/assets/medassist.png";
 
 const PROJECTS = [
   {
     title: "MedAssist AI",
     subtitle: "AI · MACHINE LEARNING · FULL-STACK",
     icon: Stethoscope,
-    image: gutsenseImg,
+    image: medassistImg,
     summary:
       "AI-powered healthcare decision-support platform that analyzes symptoms and provides disease predictions, chronic disease risk assessment, treatment-related insights, and severity analysis.",
     details: [
