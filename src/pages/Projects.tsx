@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { ExternalLink, Wind, Activity, UtensilsCrossed, Heart } from "lucide-react";
+import { ExternalLink, Wind, Activity, UtensilsCrossed, Heart, Stethoscope } from "lucide-react";
 import { PageShell, Reveal, SectionHeading } from "@/components/PageShell";
 import gutsenseImg from "@/assets/gutsense.jpeg";
 import urbanbreezeImg from "@/assets/urbanbreeze.jpeg";
@@ -8,6 +8,24 @@ import talenttrackImg from "@/assets/talenttrack.jpeg";
 import foodhopperImg from "@/assets/foodhopper.jpeg";
 
 const PROJECTS = [
+  {
+    title: "MedAssist AI",
+    subtitle: "AI · MACHINE LEARNING · FULL-STACK",
+    icon: Stethoscope,
+    image: gutsenseImg,
+    summary:
+      "AI-powered healthcare decision-support platform that analyzes symptoms and provides disease predictions, chronic disease risk assessment, treatment-related insights, and severity analysis.",
+    details: [
+      "Disease prediction model covering 684 diseases from patient symptoms",
+      "Risk assessment for 10 chronic conditions using calibrated ML models",
+      "Treatment classification with clinical text processing and severity engine",
+      "Full-stack healthcare platform with responsive dashboard and PostgreSQL database",
+    ],
+    tags: ["React", "FastAPI", "Python", "PostgreSQL", "Scikit-learn", "Machine Learning", "Vercel", "Render"],
+    accent: "from-blue-500/40 to-green-500/40",
+    github: "https://github.com/springboardmentor4804-gif/Medical-Symptom-Analysis-Disease-Prediction-System/tree/dharanikarthi",
+    demo: "https://medassist-frontend.vercel.app/",
+  },
   {
     title: "GutSense",
     subtitle: "AI · Full-Stack · PWA",
